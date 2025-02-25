@@ -28,4 +28,4 @@ Revado helps healthcare providers with:
 
 ## License
 
-Copyright © 2023 Revado. All rights reserved.
+Copyright © 2025 Revado AI Inc. All rights reserved.
