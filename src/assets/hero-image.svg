@@ -1,0 +1,66 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" rx="16" fill="#F0F9FF"/>
+  
+  <!-- Dashboard UI -->
+  <rect x="100" y="50" width="600" height="400" rx="8" fill="white" stroke="#E0E7FF" stroke-width="2"/>
+  
+  <!-- Top Nav -->
+  <rect x="100" y="50" width="600" height="60" rx="8" fill="#0EA5E9" stroke="#0EA5E9" stroke-width="2"/>
+  <rect x="130" y="70" width="120" height="20" rx="4" fill="white" opacity="0.9"/>
+  <rect x="530" y="70" width="40" height="20" rx="10" fill="white" opacity="0.7"/>
+  <rect x="590" y="70" width="80" height="20" rx="10" fill="white" opacity="0.7"/>
+  
+  <!-- Sidebar -->
+  <rect x="100" y="110" width="120" height="340" fill="#F8FAFC" stroke="#E0E7FF" stroke-width="2"/>
+  <rect x="115" y="130" width="90" height="10" rx="2" fill="#94A3B8"/>
+  <rect x="115" y="150" width="90" height="10" rx="2" fill="#94A3B8"/>
+  <rect x="115" y="170" width="90" height="10" rx="2" fill="#0EA5E9"/>
+  <rect x="115" y="190" width="90" height="10" rx="2" fill="#94A3B8"/>
+  <rect x="115" y="210" width="90" height="10" rx="2" fill="#94A3B8"/>
+  <rect x="115" y="250" width="90" height="10" rx="2" fill="#94A3B8"/>
+  <rect x="115" y="270" width="90" height="10" rx="2" fill="#94A3B8"/>
+  
+  <!-- Main Content -->
+  <rect x="240" y="130" width="440" height="60" rx="4" fill="#F1F5F9"/>
+  <rect x="260" y="145" width="180" height="30" rx="4" fill="#0EA5E9" opacity="0.9"/>
+  <rect x="460" y="145" width="100" height="30" rx="4" fill="#0EA5E9" opacity="0.7"/>
+  <rect x="580" y="145" width="80" height="30" rx="4" fill="#0EA5E9" opacity="0.5"/>
+  
+  <!-- Charts -->
+  <rect x="240" y="210" width="210" height="140" rx="4" fill="#F1F5F9"/>
+  <rect x="255" y="225" width="180" height="15" rx="2" fill="#64748B"/>
+  <rect x="255" y="250" width="180" height="85" rx="2" fill="white"/>
+  
+  <!-- Chart Elements -->
+  <rect x="265" y="315" width="10" height="10" rx="1" fill="#0EA5E9"/>
+  <rect x="285" y="300" width="10" height="25" rx="1" fill="#0EA5E9"/>
+  <rect x="305" y="290" width="10" height="35" rx="1" fill="#0EA5E9"/>
+  <rect x="325" y="270" width="10" height="55" rx="1" fill="#0EA5E9"/>
+  <rect x="345" y="285" width="10" height="40" rx="1" fill="#0EA5E9"/>
+  <rect x="365" y="260" width="10" height="65" rx="1" fill="#0EA5E9"/>
+  <rect x="385" y="280" width="10" height="45" rx="1" fill="#0EA5E9"/>
+  <rect x="405" y="295" width="10" height="30" rx="1" fill="#0EA5E9"/>
+  
+  <!-- Table -->
+  <rect x="470" y="210" width="210" height="140" rx="4" fill="#F1F5F9"/>
+  <rect x="485" y="225" width="180" height="15" rx="2" fill="#64748B"/>
+  <rect x="485" y="250" width="180" height="20" rx="1" fill="white"/>
+  <rect x="485" y="275" width="180" height="20" rx="1" fill="white"/>
+  <rect x="485" y="300" width="180" height="20" rx="1" fill="white"/>
+  <rect x="485" y="325" width="180" height="20" rx="1" fill="white"/>
+  
+  <!-- Status Elements -->
+  <circle cx="500" cy="260" r="5" fill="#7DD3FC"/>
+  <circle cx="500" cy="285" r="5" fill="#0EA5E9"/>
+  <circle cx="500" cy="310" r="5" fill="#0369A1"/>
+  <circle cx="500" cy="335" r="5" fill="#7DD3FC"/>
+  
+  <!-- Cards -->
+  <rect x="240" y="370" width="210" height="70" rx="4" fill="#F1F5F9"/>
+  <rect x="255" y="385" width="110" height="15" rx="2" fill="#64748B"/>
+  <rect x="255" y="410" width="70" height="15" rx="2" fill="#0EA5E9"/>
+  
+  <rect x="470" y="370" width="210" height="70" rx="4" fill="#F1F5F9"/>
+  <rect x="485" y="385" width="110" height="15" rx="2" fill="#64748B"/>
+  <rect x="485" y="410" width="70" height="15" rx="2" fill="#0EA5E9"/>
+</svg> 
