@@ -10,38 +10,37 @@ import CTA from './components/CTA'
 import Footer from './components/Footer'
 
 function App() {
-    const [isLoading, setIsLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         // Simulate loading time
         const timer = setTimeout(() => {
-            setIsLoading(false);
+            setLoading(false);
         }, 1000);
 
         return () => clearTimeout(timer);
     }, []);
 
-    if (isLoading) {
-        return (
-            <div className="fixed inset-0 flex items-center justify-center bg-white">
-                <div className="flex flex-col items-center">
-                    <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
-                    <h2 className="text-xl font-semibold text-gray-800">Loading Revado...</h2>
-                </div>
-            </div>
-        );
-    }
-
     return (
-        <div className="min-h-screen">
-            <Navbar />
-            <Hero />
-            <Features />
-            <Innovations />
-            <Benefits />
-            <Testimonials />
-            <CTA />
-            <Footer />
+        <div className="min-h-screen bg-white">
+            {loading ? (
+                <div className="flex items-center justify-center min-h-screen">
+                    <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                </div>
+            ) : (
+                <div className="flex flex-col min-h-screen">
+                    <Navbar />
+                    <main className="flex-grow w-full">
+                        <Hero />
+                        <Features />
+                        <Innovations />
+                        <Benefits />
+                        <Testimonials />
+                        <CTA />
+                    </main>
+                    <Footer />
+                </div>
+            )}
         </div>
     )
 }

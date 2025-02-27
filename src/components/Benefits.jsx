@@ -102,8 +102,8 @@ const Benefits = () => {
     ];
 
     return (
-        <section id="benefits" ref={sectionRef} className="py-20">
-            <div className="container mx-auto px-4">
+        <section id="benefits" ref={sectionRef} className="py-20 w-full bg-white">
+            <div className="px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
                 <div className={`text-center mb-16 transition-all duration-700 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                     }`}>
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Why Choose Revado</h2>

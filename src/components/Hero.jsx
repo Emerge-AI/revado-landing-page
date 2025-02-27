@@ -43,8 +43,8 @@ const Hero = () => {
     };
 
     return (
-        <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-blue-50">
-            <div className="container mx-auto px-4">
+        <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-blue-50 overflow-x-hidden w-full">
+            <div className="px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
                 <div className="flex flex-col md:flex-row items-center mb-16">
                     <div className={`md:w-1/2 mb-12 md:mb-0 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                         } z-10`}>
@@ -97,30 +97,33 @@ const Hero = () => {
                 </div>
 
                 {/* Enhancement Showcase */}
-                <div className={`bg-white rounded-2xl shadow-xl p-8 transition-all duration-1000 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                <div className={`bg-white rounded-2xl shadow-xl p-4 sm:p-8 transition-all duration-1000 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                     }`}>
-                    <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Our Core Innovations</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">Our Core Innovations</h2>
 
-                    <div className="flex border-b border-gray-200 mb-6">
-                        {Object.keys(enhancementTabs).map((tab) => (
-                            <button
-                                key={tab}
-                                className={`flex items-center px-6 py-3 font-medium text-lg transition-colors duration-300 ${activeTab === tab
-                                    ? 'text-blue-600 border-b-2 border-blue-600'
-                                    : 'text-gray-500 hover:text-blue-600'
-                                    }`}
-                                onClick={() => setActiveTab(tab)}
-                            >
-                                {enhancementTabs[tab].icon}
-                                {enhancementTabs[tab].title}
-                            </button>
-                        ))}
+                    {/* Mobile-optimized tabs */}
+                    <div className="flex w-full border-b border-gray-200 mb-6 overflow-hidden">
+                        <div className="flex w-full justify-center">
+                            {Object.keys(enhancementTabs).map((tab) => (
+                                <button
+                                    key={tab}
+                                    className={`flex items-center px-3 sm:px-6 py-3 font-medium text-base sm:text-lg transition-colors duration-300 ${activeTab === tab
+                                        ? 'text-blue-600 border-b-2 border-blue-600'
+                                        : 'text-gray-500 hover:text-blue-600'
+                                        }`}
+                                    onClick={() => setActiveTab(tab)}
+                                >
+                                    {enhancementTabs[tab].icon}
+                                    <span>{tab === 'document' ? 'Document' : 'Social'}</span>
+                                </button>
+                            ))}
+                        </div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">{enhancementTabs[activeTab].title}</h3>
-                            <p className="text-gray-700 mb-6 text-lg">{enhancementTabs[activeTab].description}</p>
+                            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{enhancementTabs[activeTab].title}</h3>
+                            <p className="text-gray-700 mb-6 text-base sm:text-lg">{enhancementTabs[activeTab].description}</p>
 
                             <div className="space-y-4">
                                 {enhancementTabs[activeTab].features.map((feature, index) => (
@@ -130,60 +133,62 @@ const Hero = () => {
                                                 {feature.icon}
                                             </div>
                                         </div>
-                                        <p className="ml-4 text-gray-700">{feature.text}</p>
+                                        <p className="ml-4 text-gray-700 text-sm sm:text-base">{feature.text}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className="relative">
+                        <div className="relative mt-6 md:mt-0">
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg opacity-10 transform rotate-2"></div>
-                            <div className="relative bg-white p-6 rounded-lg border border-blue-100 shadow-lg">
+                            <div className="relative bg-white p-4 sm:p-6 rounded-lg border border-blue-100 shadow-lg">
                                 {activeTab === 'document' ? (
                                     <div className="space-y-4">
-                                        <div className="flex items-center justify-between bg-blue-50 p-3 rounded-lg">
-                                            <div className="flex items-center">
-                                                <FiFileText className="text-blue-600 mr-2" />
-                                                <span className="font-medium">Medical Document</span>
+                                        {/* Document items - Mobile optimized */}
+                                        <div className="flex flex-wrap items-center justify-between bg-blue-50 p-3 rounded-lg">
+                                            <div className="flex items-center mr-2">
+                                                <FiFileText className="text-blue-600 mr-2 flex-shrink-0" />
+                                                <span className="font-medium text-sm sm:text-base">Medical Document</span>
                                             </div>
-                                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Included</span>
+                                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full mt-1 sm:mt-0">Included</span>
                                         </div>
-                                        <div className="flex items-center justify-between bg-blue-50 p-3 rounded-lg">
-                                            <div className="flex items-center">
-                                                <FiFileText className="text-blue-600 mr-2" />
-                                                <span className="font-medium">Legal Precedent</span>
+                                        <div className="flex flex-wrap items-center justify-between bg-blue-50 p-3 rounded-lg">
+                                            <div className="flex items-center mr-2">
+                                                <FiFileText className="text-blue-600 mr-2 flex-shrink-0" />
+                                                <span className="font-medium text-sm sm:text-base">Legal Precedent</span>
                                             </div>
-                                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Cited</span>
+                                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full mt-1 sm:mt-0">Cited</span>
                                         </div>
-                                        <div className="flex items-center justify-between bg-blue-50 p-3 rounded-lg">
-                                            <div className="flex items-center">
-                                                <FiFileText className="text-blue-600 mr-2" />
-                                                <span className="font-medium">Payer Policy</span>
+                                        <div className="flex flex-wrap items-center justify-between bg-blue-50 p-3 rounded-lg">
+                                            <div className="flex items-center mr-2">
+                                                <FiFileText className="text-blue-600 mr-2 flex-shrink-0" />
+                                                <span className="font-medium text-sm sm:text-base">Payer Policy</span>
                                             </div>
-                                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Referenced</span>
+                                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full mt-1 sm:mt-0">Referenced</span>
                                         </div>
                                     </div>
                                 ) : (
                                     <div className="space-y-4">
-                                        <div className="flex items-center justify-between bg-blue-50 p-3 rounded-lg">
-                                            <div className="flex items-center">
-                                                <FiPhone className="text-blue-600 mr-2" />
-                                                <span className="font-medium">Stella AI Call</span>
+                                        {/* Social items - Mobile optimized */}
+                                        <div className="flex flex-wrap items-center justify-between bg-blue-50 p-3 rounded-lg">
+                                            <div className="flex items-center mr-2">
+                                                <FiPhone className="text-blue-600 mr-2 flex-shrink-0" />
+                                                <span className="font-medium text-sm sm:text-base">Stella AI Call</span>
                                             </div>
-                                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Completed</span>
+                                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full mt-1 sm:mt-0">Completed</span>
                                         </div>
-                                        <div className="flex items-center justify-between bg-blue-50 p-3 rounded-lg">
-                                            <div className="flex items-center">
-                                                <FiCalendar className="text-blue-600 mr-2" />
-                                                <span className="font-medium">P2P Meeting</span>
+                                        <div className="flex flex-wrap items-center justify-between bg-blue-50 p-3 rounded-lg">
+                                            <div className="flex items-center mr-2">
+                                                <FiCalendar className="text-blue-600 mr-2 flex-shrink-0" />
+                                                <span className="font-medium text-sm sm:text-base">P2P Meeting</span>
                                             </div>
-                                            <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Scheduled</span>
+                                            <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full mt-1 sm:mt-0">Scheduled</span>
                                         </div>
-                                        <div className="flex items-center justify-between bg-blue-50 p-3 rounded-lg">
-                                            <div className="flex items-center">
-                                                <FiUsers className="text-blue-600 mr-2" />
-                                                <span className="font-medium">Legal Escalation</span>
+                                        <div className="flex flex-wrap items-center justify-between bg-blue-50 p-3 rounded-lg">
+                                            <div className="flex items-center mr-2">
+                                                <FiUsers className="text-blue-600 mr-2 flex-shrink-0" />
+                                                <span className="font-medium text-sm sm:text-base">Legal Escalation</span>
                                             </div>
-                                            <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">In Progress</span>
+                                            <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full mt-1 sm:mt-0">In Progress</span>
                                         </div>
                                     </div>
                                 )}
